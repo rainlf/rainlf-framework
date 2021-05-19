@@ -15,6 +15,7 @@
         <guava.version>30.0-jre</guava.version>
         <mapstruct.version>1.4.2.Final</mapstruct.version>
         <swagger.version>3.0.0</swagger.version>
+        <lombok.version>1.18.16</lombok.version>
         <mybatis.version>3.4.2</mybatis.version>
         <poi.version>5.0.0</poi.version>
         <elasticsearch.version>7.9.3</elasticsearch.version>
@@ -118,6 +119,7 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
             <optional>true</optional>
         </dependency>
         <dependency>
@@ -151,7 +153,13 @@
         </dependencies>
     </dependencyManagement>
 
+
     <build>
+        <resources>
+            <resource>
+                <directory>${basedir}/src/main/resources</directory>
+            </resource>
+        </resources>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -161,6 +169,19 @@
                     <source>1.8</source>
                     <target>1.8</target>
                     <encoding>UTF-8</encoding>
+                    <annotationProcessorPaths>
+                        <!-- 注意这里的顺序 -->
+                        <path>
+                            <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok</artifactId>
+                            <version>${lombok.version}</version>
+                        </path>
+                        <path>
+                            <groupId>org.mapstruct</groupId>
+                            <artifactId>mapstruct-processor</artifactId>
+                            <version>${mapstruct.version}</version>
+                        </path>
+                    </annotationProcessorPaths>
                 </configuration>
             </plugin>
             <plugin>
