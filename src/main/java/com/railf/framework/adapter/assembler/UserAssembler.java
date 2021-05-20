@@ -4,7 +4,6 @@ import com.railf.framework.adapter.dto.UserDTO;
 import com.railf.framework.domain.User;
 import com.railf.framework.infrastructure.mapstrcut.BaseAssembler;
 import org.mapstruct.Mapper;
-import org.mapstruct.Mapping;
 
 /**
  * @author : rain

@@ -4,8 +4,8 @@ SpringBoot project with common services & utils
 
 ## Environment
 
-- java: 1.8
-- springboot:2.4.1
+- `java`: 1.8
+- `springboot`:2.4.1
 
 ## Service & Utils
 
