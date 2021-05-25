@@ -1,4 +1,4 @@
-package com.railf.framework.infrastructure.dao.mybatis.entity;
+package com.railf.framework.infrastructure.dao.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;

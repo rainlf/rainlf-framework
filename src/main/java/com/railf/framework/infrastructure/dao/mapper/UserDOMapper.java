@@ -1,8 +1,8 @@
-package com.railf.framework.infrastructure.dao.mybatis.mapper;
+package com.railf.framework.infrastructure.dao.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.railf.framework.domain.User;
-import com.railf.framework.infrastructure.dao.mybatis.entity.UserDO;
+import com.railf.framework.infrastructure.dao.entity.UserDO;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
