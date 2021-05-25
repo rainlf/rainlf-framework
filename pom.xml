@@ -188,6 +188,12 @@
                     <!-- 指定repackage工件（可执行jar）的后缀 -->
                     <!-- <classifier>exec</classifier>-->
                     <mainClass>com.railf.framework.RainlfFrameworkApplication</mainClass>
+                    <excludes>
+                        <exclude>
+                            <groupId>org.springframework.boot</groupId>
+                            <artifactId>spring-boot-configuration-processor</artifactId>
+                        </exclude>
+                    </excludes>
                 </configuration>
                 <executions>
                     <execution>

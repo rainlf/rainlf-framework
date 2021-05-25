@@ -25,7 +25,7 @@ import java.util.concurrent.TimeUnit;
 @Slf4j
 @Configuration
 @EnableConfigurationProperties(EsLogProperties.class)
-@ConditionalOnProperty(prefix = "framework.log.es", value = "enable", havingValue = "true")
+@ConditionalOnProperty(prefix = "es.log", value = "enable", havingValue = "true")
 public class EsLogConfig {
 
     @Autowired

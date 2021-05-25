@@ -19,13 +19,13 @@
 <!--        </encoder>-->
 <!--    </appender>-->
 
-<!--    <appender name="ES" class="com.rainlf.springboot.framework.infrastructure.log.EsAppender"/>-->
+    <appender name="ES" class="com.railf.framework.infrastructure.log.EsLogAppender"/>
 
-<!--    <logger name="com.rainlf.springboot.framework" additivity="false">-->
-<!--        <appender-ref ref="ES"/>-->
+    <logger name="com.rainlf.springboot.framework" additivity="false">
+        <appender-ref ref="ES"/>
 <!--        <appender-ref ref="FILE"/>-->
-<!--        <appender-ref ref="STDOUT"/>-->
-<!--    </logger>-->
+        <appender-ref ref="STDOUT"/>
+    </logger>
 
     <root level="INFO">
         <appender-ref ref="STDOUT"/>

@@ -10,7 +10,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
  */
 @Slf4j
 @Data
-@ConfigurationProperties(prefix = "framework.log.es")
+@ConfigurationProperties(prefix = "es.log")
 public class EsLogProperties {
     private String schema = "http";
     private String host;
