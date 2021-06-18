@@ -1,5 +1,6 @@
 package com.railf.framework.domain;
 
+import lombok.Builder;
 import lombok.Data;
 
 import javax.validation.constraints.Email;
@@ -11,7 +12,7 @@ import javax.validation.constraints.Size;
  * @author : rain
  * @date : 2021/4/30 14:28
  */
-@Data
+@Builder
 public class User {
     private Integer id;
 
