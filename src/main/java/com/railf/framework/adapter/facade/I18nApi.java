@@ -17,6 +17,6 @@ public class I18nApi {
 
     @GetMapping("i18n")
     public APIResponse<String> i18nMessage() {
-        return APIResponse.ok(local("welcome", "xxx"));
+        return APIResponse.ok(local("hello", "rain"));
     }
 }
