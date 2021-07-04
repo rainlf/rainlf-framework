@@ -69,6 +69,4 @@ public class LocaleMessage implements InitializingBean {
     public String getMessage(String code, Object[] args, String defaultMessage, Locale locale) {
         return messageSource.getMessage(code, args, defaultMessage, locale);
     }
-
-
 }
