@@ -2,6 +2,7 @@ package com.railf.framework.infrastructure.util;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.DeserializationFeature;
+import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
@@ -16,6 +17,14 @@ import java.util.List;
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class JsonUtils {
     private static final ObjectMapper mapper = new ObjectMapper().configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+
+    public static JsonNode toJsonNode(String value) {
+        try {
+            return mapper.readTree(value);
+        } catch (IOException e) {
+            throw new IllegalArgumentException("Parse value error: " + e.getMessage(), e);
+        }
+    }
 
     public static String toJsonString(Object object) {
         try {
